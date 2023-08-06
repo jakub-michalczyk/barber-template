@@ -1,0 +1,21 @@
+<label class="_offcanvas-toggle"
+       for="check">
+    <input class="_offcanvas-btn-input"
+           (change)="offcanvasToggle()"
+           type="checkbox"
+           id="check" />
+    <span [ngClass]="closed ? 'bg-col-dark' : 'bg-col-white'"
+          class="_offcanvas-btn-line"></span>
+    <span [ngClass]="closed ? 'bg-col-dark' : 'bg-col-white'"
+          class="_offcanvas-btn-line"></span>
+    <span [ngClass]="closed ? 'bg-col-dark' : 'bg-col-white'"
+          class="_offcanvas-btn-line"></span>
+</label>
+
+<div class="_offcanvas bg-col-dark"
+     [ngClass]="{'_closed': closed}">
+    <app-logo></app-logo>
+    <div class="_menu-wrap">
+        <app-menu></app-menu>
+    </div>
+</div>
