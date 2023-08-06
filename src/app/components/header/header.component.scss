@@ -2,7 +2,7 @@
 @use "/src/global/config.scss";
 
 ._header {
-  min-height: 5rem;
+  height: config.$header-height;
   vertical-align: middle;
   padding: 1rem 0 1rem 5rem;
   box-sizing: border-box;
