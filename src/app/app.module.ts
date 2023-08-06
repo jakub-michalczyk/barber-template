@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { OffcanvasComponent } from './components/offcanvas/offcanvas.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LogoComponent } from './components/logo/logo.component';
     HeaderComponent,
     OffcanvasComponent,
     MenuComponent,
-    LogoComponent
+    LogoComponent,
+    HeroBannerComponent
   ],
   imports: [
     BrowserModule,
