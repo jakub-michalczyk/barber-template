@@ -1,0 +1,54 @@
+@use "/src/global/functions.scss";
+@use "/src/global/config.scss";
+
+._header {
+  min-height: 5rem;
+  vertical-align: middle;
+  padding: 1rem 0 1rem 5rem;
+  box-sizing: border-box;
+  ._header-content {
+    @include functions.flex(space-between, center);
+    width: 75%;
+  }
+}
+
+._logo {
+  @include functions.flex(center, center);
+  img {
+    max-width: 75%;
+    object-fit: contain;
+  }
+}
+
+._menu {
+  list-style: none;
+  ._menu-link {
+    position: relative;
+    margin-left: 30px;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    &:hover {
+      &::after {
+        width: 35%;
+      }
+    }
+    &::after {
+      @extend .bg-col-lightgrey;
+      content: "";
+      display: block;
+      width: 15%;
+      height: 1px;
+      position: absolute;
+      left: 50%;
+      bottom: -35%;
+      transform: translate(-50%);
+      transition: width 0.3s;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  ._header {
+    display: none;
+  }
+}
