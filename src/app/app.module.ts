@@ -8,6 +8,7 @@ import { OffcanvasComponent } from './components/offcanvas/offcanvas.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeroBannerComponent } from './components/hero-banner/hero-banner.compon
     OffcanvasComponent,
     MenuComponent,
     LogoComponent,
-    HeroBannerComponent
+    HeroBannerComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
