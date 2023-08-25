@@ -8,6 +8,9 @@ import { OffcanvasComponent } from './components/offcanvas/offcanvas.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { HeadingComponent } from './components/heading/heading.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HeroBannerComponent } from './components/hero-banner/hero-banner.compon
     OffcanvasComponent,
     MenuComponent,
     LogoComponent,
-    HeroBannerComponent
+    HeroBannerComponent,
+    GalleryComponent,
+    HeadingComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

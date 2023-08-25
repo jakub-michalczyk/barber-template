@@ -1,0 +1,42 @@
+@use "/src/global/functions.scss";
+
+$smallImageHeight: 427px;
+
+._gallery {
+  @include functions.flex(flex-start, center, column);
+  padding-top: 5%;
+  min-height: 100%;
+  &-wrap {
+    @include functions.flex(center, flex-start);
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    img {
+      max-width: 100%;
+    }
+  }
+  .column {
+    width: 50%;
+    @include functions.flex(center, space-between);
+    flex-wrap: wrap;
+  }
+  ._big-image {
+    height: calc(#{$smallImageHeight} * 2);
+    img {
+      height: 100%;
+    }
+  }
+  &-image {
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      transition: all 0.7s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1) rotate(5deg);
+      }
+    }
+  }
+}
