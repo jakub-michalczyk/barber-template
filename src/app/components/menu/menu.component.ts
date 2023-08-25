@@ -5,4 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent {}
+export class MenuComponent {
+  scrollTo(id: string) {
+    const elementPosition =
+      document.querySelector(`#${id}`)!.getBoundingClientRect().top +
+      window.scrollY;
+
+    window.scroll({
+      top: elementPosition,
+      behavior: 'smooth',
+    });
+  }
+}

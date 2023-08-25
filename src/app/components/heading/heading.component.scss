@@ -1,0 +1,20 @@
+@use "/src/global/functions.scss";
+
+:host {
+  width: 100%;
+}
+
+._heading {
+  @include functions.flex(flex-start, center);
+  font-size: 4rem;
+  width: 50%;
+  &-wrap {
+    @include functions.flex(center, center);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  ._heading {
+    width: 75%;
+  }
+}

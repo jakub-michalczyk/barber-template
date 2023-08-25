@@ -9,6 +9,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { HeadingComponent } from './components/heading/heading.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     MenuComponent,
     LogoComponent,
     HeroBannerComponent,
-    GalleryComponent
+    GalleryComponent,
+    HeadingComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

@@ -6,18 +6,6 @@ $smallImageHeight: 427px;
   @include functions.flex(flex-start, center, column);
   padding-top: 5%;
   min-height: 100%;
-  ._heading {
-    @include functions.flex(center, center);
-    font-size: 4rem;
-    &::before {
-      @extend .bg-col-white;
-      content: "";
-      display: block;
-      width: 8rem;
-      height: 1px;
-      margin-right: 5%;
-    }
-  }
   &-wrap {
     @include functions.flex(center, flex-start);
     width: 100%;
