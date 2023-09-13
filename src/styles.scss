@@ -1,6 +1,9 @@
 @use "/src/global/config.scss";
 @use "/src/global/functions.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
 * {
   font-family: "Roboto Condensed", sans-serif;
@@ -24,4 +27,8 @@ html {
 
 .inline-block {
   display: inline-block;
+}
+
+.block-scroll {
+  overflow-y: hidden;
 }

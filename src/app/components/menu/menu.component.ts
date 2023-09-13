@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollToService } from 'src/global/scroll-to.service';
 
 @Component({
   selector: 'app-menu',
@@ -6,14 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  scrollTo(id: string) {
-    const elementPosition =
-      document.querySelector(`#${id}`)!.getBoundingClientRect().top +
-      window.scrollY;
+  constructor(private scrollToService: ScrollToService) {}
 
-    window.scroll({
-      top: elementPosition,
-      behavior: 'smooth',
-    });
+  scroll(id: string) {
+    this.scrollToService.scrollTo(id);
   }
 }

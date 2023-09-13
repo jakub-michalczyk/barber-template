@@ -1,0 +1,35 @@
+<div class="_overlayer w-full"></div>
+<div class="_light-box w-full">
+    <div class="_light-box-content">
+        <div class="close"
+             (click)="close()">
+            <img src="assets/images/close.png">
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                     [ngClass]="'swiper-slide--' + i"
+                     *ngFor="let img of images; let i = index">
+                    <div class="w-full _light-box-image"
+                         [attr.data-id]="i">
+                        <img [src]="'/assets/images/' +  img.name + '.jpg'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow arrow-left"
+                 [ngClass]="{'disabled': currentImage!.id === 0}"
+                 (click)="previous()">
+                <img class="reverse"
+                     src="assets/images/arrow-icon.png">
+            </div>
+            <div class="arrow arrow-right"
+                 [ngClass]="{'disabled': currentImage!.id === (images.length - 1)}"
+                 (click)="next()">
+                <img src="assets/images/arrow-icon.png">
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>

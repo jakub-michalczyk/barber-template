@@ -1,35 +1,34 @@
 @use "/src/global/functions.scss";
 
-$smallImageHeight: 427px;
+$smallImageHeight: 239.2px;
 
 ._gallery {
   @include functions.flex(flex-start, center, column);
   padding-top: 5%;
   min-height: 100%;
   &-wrap {
-    @include functions.flex(center, flex-start);
-    width: 100%;
+    display: flex;
+    width: 50%;
     flex-wrap: wrap;
-    margin-top: 5%;
+    margin-top: 2%;
     img {
       max-width: 100%;
     }
   }
-  .column {
+  ._column {
     width: 50%;
     @include functions.flex(center, space-between);
     flex-wrap: wrap;
+    min-height: 100%;
   }
   ._big-image {
-    height: calc(#{$smallImageHeight} * 2);
-    img {
-      height: 100%;
-    }
+    height: auto;
   }
   &-image {
     overflow: hidden;
     cursor: pointer;
     img {
+      height: 100%;
       transition: all 0.7s ease-in-out;
     }
 
@@ -38,5 +37,17 @@ $smallImageHeight: 427px;
         transform: scale(1.1) rotate(5deg);
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  ._gallery ._column {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  ._gallery-wrap {
+    width: 75%;
   }
 }
