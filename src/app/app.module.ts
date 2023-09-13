@@ -11,6 +11,7 @@ import { HeroBannerComponent } from './components/hero-banner/hero-banner.compon
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { HeadingComponent } from './components/heading/heading.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { LightBoxComponent } from './light-box/light-box.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,11 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     HeroBannerComponent,
     GalleryComponent,
     HeadingComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    LightBoxComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
