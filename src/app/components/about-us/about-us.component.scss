@@ -3,31 +3,14 @@
 
 ._about-us {
   @include functions.flex(center, center, column);
-  padding: 5rem 0;
+  padding: 10rem 0;
   &-text {
     position: relative;
     margin-top: 2%;
     width: 50%;
     line-height: 1.75rem;
     font-size: 1.1rem;
-    padding: 0 3rem 3rem 0;
     box-sizing: border-box;
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      right: 0;
-      bottom: 0;
-      background-color: map-get(config.$colors, white);
-    }
-    &::before {
-      height: 50%;
-      width: 1px;
-    }
-    &::after {
-      height: 1px;
-      width: 50%;
-    }
   }
 }
 
