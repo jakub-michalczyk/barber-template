@@ -56,8 +56,6 @@ export class LightBoxComponent implements OnInit {
   }
 
   previous() {
-    console.log(this.swiper.realIndex);
-
     this.swiper.slidePrev();
     this.update();
   }
@@ -66,7 +64,7 @@ export class LightBoxComponent implements OnInit {
     let slide = document.querySelector(
       '.swiper-slide-active ._light-box-image'
     ) as HTMLDivElement;
-    console.log(slide.dataset.id);
+
     this.lightBoxService.updateCurrentImage(
       this.images.find((img) => img.id === Number(slide.dataset.id))!
     );
