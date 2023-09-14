@@ -1,4 +1,5 @@
 @use "/src/global/functions.scss";
+@use "/src/global/config.scss";
 
 $smallImageHeight: 239.2px;
 
@@ -24,17 +25,27 @@ $smallImageHeight: 239.2px;
   ._big-image {
     height: auto;
   }
+  &-image-overlayer {
+    @include functions.flex(center, center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0%;
+    transition: height 0.3s;
+    background-color: rgba(map-get(config.$colors, dark), 0.8);
+    overflow: hidden;
+  }
   &-image {
+    height: 100%;
+    transition: all 0.7s ease-in-out;
+  }
+  &-image-wrap {
+    position: relative;
     overflow: hidden;
     cursor: pointer;
-    img {
-      height: 100%;
-      transition: all 0.7s ease-in-out;
-    }
-
     &:hover {
-      img {
-        transform: scale(1.1) rotate(5deg);
+      ._gallery-image-overlayer {
+        height: 100%;
       }
     }
   }

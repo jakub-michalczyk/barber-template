@@ -4,11 +4,15 @@
     <div class="_gallery-wrap">
         <div class="_column"
              *ngFor="let column of images.columns">
-            <div class="_gallery-image"
+            <div class="_gallery-image-wrap"
                  *ngFor="let image of column.images"
                  [ngClass]="{'_big-image': image.isBigImage}"
                  (click)="openLightBox(image.id)">
-                <img [src]="'/assets/images/' + image.name + '.jpg'" />
+                <div class="w-full _gallery-image-overlayer">
+                    <img src="/assets/images/zoom.png" />
+                </div>
+                <img class="_gallery-image"
+                     [src]="'/assets/images/' + image.name + '.jpg'" />
             </div>
         </div>
     </div>
