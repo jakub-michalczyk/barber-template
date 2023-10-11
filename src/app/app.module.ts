@@ -12,6 +12,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { HeadingComponent } from './components/heading/heading.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { LightBoxComponent } from './light-box/light-box.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LightBoxComponent } from './light-box/light-box.component';
     HeadingComponent,
     AboutUsComponent,
     LightBoxComponent,
+    ContactComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -1,0 +1,29 @@
+<div class="_contact-wrap bg-col-dark col-white"
+     id="contact">
+    <app-heading text="Contact"></app-heading>
+    <div class="_contact-content">
+        <h2 class="_title"
+            *ngIf="!isMobile">
+            Umów się na wizytę
+            <span class="_subtitle">Zapraszamy do kontaktu</span>
+        </h2>
+        <table class="_opened-hours">
+            <tr *ngFor="let weekDay of openedHours">
+                <td>{{ weekDay.day }}</td>
+                <td [ngClass]="weekDay.closed ? 'closed' : 'opened'">{{ weekDay.hours }}</td>
+            </tr>
+        </table>
+        <div class="_contact-data">
+            <div class="_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.635418255535!2d21.00342007696388!3d52.231841257523676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c92692e49%3A0xc2e97ae5311f2dc2!2sPa%C5%82ac%20Kultury%20i%20Nauki!5e0!3m2!1spl!2spl!4v1695029709508!5m2!1spl!2spl"
+                        [width]="mapSize"
+                        [height]="200"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+</div>
